@@ -22,6 +22,7 @@ game = {
 
 		//populate currentWrd (made from Word constructor function) object with letters
 		this.currentWrd.getLets();
+		process.stdout.write('\033c');
 		console.log('  The Word to be guessed: ');
 		console.log('  ',this.currentWrd.wordRender());
 		console.log('');
@@ -46,6 +47,8 @@ game = {
 		    //console.log(result);
 		    var upperLetter = result.guessLetter.toUpperCase();
 		    
+		    process.stdout.write('\033c');
+
 		    console.log('  The letter you guessed is: ', upperLetter);
 
 		    //this checks if the letter was found and if it is then it sets that specific letter in the word to be found
